@@ -8,6 +8,34 @@ This repository contains a fullstack application with a React frontend and a Nod
 2. MySQL (or relevant SQL database) instance running.
 3. Git for cloning the repository.
 
+## Project Structure
+
+The project structure of the backend is as follows:
+
+- `src`: This folder contains the actual source code of the project, excluding tests. You may consider creating a separate `tests` folder for your tests.
+
+Let's take a closer look inside the `src` folder:
+
+- `config`: This folder is used for configuring and setting up various libraries or modules. For example, you can set up `dotenv` to use environment variables in a cleaner way. The configuration for logging libraries or other modules can also be done here.
+
+- `routes`: In this folder, you register routes along with their corresponding middleware and controllers.
+
+- `middlewares`: Middlewares intercept incoming requests and can be used for tasks such as request validation, authentication, etc.
+
+- `migrations`: The migrations folder is responsible for managing database schema changes over time. It contains files that define the changes to be applied to the database schema. Migrations help in keeping the database structure in sync with the application code.
+
+- `models`: The models folder contains the database models or schemas. These models define the structure of the data stored in the database and provide an interface for interacting with the data. They typically represent tables or collections in the database.
+
+- `seeders`: The seeders folder is used for seeding the database with initial or test data. Seeders provide a way to populate the database with predefined data, making it easier to set up a development or testing environment.
+
+- `controllers`: Controllers act as the last layer of middleware. They receive incoming requests and data, pass them to the business layer for executing the logic, and structure the API response before sending it back.
+
+- `repositories`: This folder contains the logic for interacting with the database using raw queries or ORM queries. It is responsible for handling database operations.
+
+- `services`: Services contain the business logic of your application and interact with repositories to fetch or modify data from the database.
+
+- `utils`: This folder contains helper methods, error classes, and other utility functions that can be used across the project.
+
 ## Getting Started
 
 ### 1. Clone the Repository:
