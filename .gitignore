@@ -1,0 +1,6 @@
+node_modules
+Backend/node_modules
+Backend/.env
+Backend/combine.log
+Backend/src/config/config.json
+Frontend/node_modules
